@@ -8,7 +8,7 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 	}
 	
 	public int checkAnswer(String givenAnswer) {
-		int total = 0;
+		int total = getPoints();
 		for(int i = 0; i < givenAnswer.length(); i++){ //go through given answer
 			if(!getAnswer().contains(givenAnswer.charAt(i) + "")){
 				total--;
@@ -21,7 +21,6 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 			}
 		}
 		
-
 		return total;
 	}
 	
