@@ -2,11 +2,9 @@ package studio8;
 
 public class SelectAllQuestion extends MultipleChoiceQuestion {
 
-	private int points;
 
 	public SelectAllQuestion(String prompt, String answer, String[] choices) {
-		super(prompt, answer, 0, choices);
-		points = choices.length;
+		super(prompt, answer, choices.length, choices);
 	}
 	
 	public int checkAnswer(String givenAnswer) {
